@@ -1,49 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    --background: 243, 247, 250;
+    --primary: 6, 18, 24;
+    --secondary: 28, 127, 158;
+    --header: 238, 251, 253;
+    --body: 213, 243, 248;
 
-    --white: 249, 250, 251;
-    --black: 3, 7, 18;
-
-    --border: 212, 212, 216;
-
-    --primary1: 191, 208, 226;
-    --primary2: 164, 183, 213;
-
-    --secondary1: 204, 154, 192;
-    --secondary2: 163, 95, 142;
-
-    --warning1: 207, 199, 162;
-    --warning2: 183, 167, 118;
-
-    --success1: 141, 200, 155;
-    --success2: 118, 183, 135;
-
-    background-color: rgba(var(--background));
+    background-color: rgba(var(--primary));
 }
 
-.dark {
-    --background: 41, 46, 61;
+body {
+    @apply font-poppins;
+}
 
-    --white: 209, 213, 219;
-    --black: 2, 6, 23;
+.btn {
+    @apply text-body bg-secondary flex flex-row items-center justify-center rounded-lg text-2xl font-bold transition-transform duration-300 hover:translate-y-[-4px];
+}
 
-    --border: 63, 63, 70;
-
-    --primary1: 82, 93, 129;
-    --primary2: 99, 113, 159;
-
-    --secondary1: 98, 57, 83;
-    --secondary2: 116, 64, 98;
-
-    --warning1: 132, 109, 74;
-    --warning2: 159, 134, 87;
-
-    --success1: 34, 90, 53;
-    --success2: 42, 113, 64;
-
-    background-color: rgba(var(--background));
+.tag {
+    @apply bg-secondary text-body flex rounded-3xl px-3 py-1 text-base font-light;
 }

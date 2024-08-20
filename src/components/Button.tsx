@@ -1,11 +1,22 @@
 import { ReactElement } from "react";
 
-export function Button(): ReactElement {
+interface ButtonProps {
+    title?: string;
+    icon?: ReactElement;
+
+    onClick(): void;
+}
+
+export function Button(props: ButtonProps): ReactElement {
+    const { title, icon, onClick } = props;
+
     return (
-        <div className="flex min-h-screen items-center justify-center">
-            <button className="rounded-md bg-secondary1 p-2 text-white hover:bg-secondary2">
-                Click me
-            </button>
-        </div>
+        <button
+            onClick={onClick}
+            className={`btn ${title ? "px-3 py-2" : "p-2"}`}
+        >
+            {icon ? <div className={title ? "mr-2" : ""}>{icon}</div> : null}
+            {title ? <span>{title}</span> : null}
+        </button>
     );
 }
