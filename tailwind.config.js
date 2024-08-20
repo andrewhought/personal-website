@@ -10,7 +10,7 @@ export default {
                 primary: "rgba(var(--primary))",
                 secondary: "rgba(var(--secondary))",
                 header: "rgba(var(--header))",
-                body: "rgba(var(--body))",
+                body: "rgba(var(--body))"
             },
             fontFamily: {
                 poppins: ["Poppins", "Helvetica", "sans-serif"]

@@ -7,9 +7,5 @@ interface TagProps {
 export function Tag(props: TagProps): ReactElement {
     const { title } = props;
 
-    return (
-        <div className="tag">
-            {title}
-        </div>
-    );
+    return <div className="tag">{title}</div>;
 }
