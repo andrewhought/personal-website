@@ -2,8 +2,10 @@ import { ReactElement } from "react";
 
 export function Button(): ReactElement {
     return (
-        <div className="min-h-screen flex justify-center items-center">
-            <button className="bg-slate-600 hover:bg-slate-500 text-white p-1 rounded-md">Click me</button>
+        <div className="flex min-h-screen items-center justify-center">
+            <button className="rounded-md bg-secondary1 p-2 text-white hover:bg-secondary2">
+                Click me
+            </button>
         </div>
     );
 }
